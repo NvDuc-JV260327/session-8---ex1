@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  background-color: white;
+}
+
+.box {
+  background-color: #add8e6;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid #999;
+  flex: 1 1 calc(50% - 5px); /* Chia 2 cột trên máy tính */
+  box-sizing: border-box;
+}
+
+.full-width {
+  flex: 1 1 100%; /* Khối 3 luôn chiếm hết chiều ngang */
+}
+
+/* Khi màn hình nhỏ hơn 600px (điện thoại) */
+@media (max-width: 600px) {
+  .box {
+    flex: 1 1 100%; /* Chuyển tất cả thành 1 cột */
+  }
+}
