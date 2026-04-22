@@ -1,26 +1,46 @@
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  background-color: white;
-}
-
-.box {
-  background-color: #add8e6;
-  padding: 30px;
-  text-align: center;
-  border: 1px solid #999;
-  flex: 1 1 calc(50% - 5px); /* Chia 2 cột trên máy tính */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-.full-width {
-  flex: 1 1 100%; /* Khối 3 luôn chiếm hết chiều ngang */
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-/* Khi màn hình nhỏ hơn 600px (điện thoại) */
-@media (max-width: 600px) {
+.box {
+  background-color: #b0ebf7;
+  color: black;
+  width: 50%;
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container :nth-child(1) {
+  border-right: 1px solid orange;
+}
+
+.boxfull {
+  background-color: #b0ebf7;
+  color: black;
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  border-top: 1px solid orange;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
   .box {
-    flex: 1 1 100%; /* Chuyển tất cả thành 1 cột */
+    width: 100%;
+  }
+
+  .container :nth-child(1) {
+    border-bottom: 1px solid orange;
   }
 }
